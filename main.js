@@ -39,7 +39,7 @@ const currencyTypes = {
 let fromCurrency = prompt("Convert from currency? e.g. USD, EUR, KRW, IDR, VND")
 let toCurrency = prompt("Convert to currency? e.g. USD, EUR, KRW, IDR, VND")
 
-let amountConvert = prompt("How much?");
+let amountConvert = prompt("How much " + fromCurrency + "?");
 
 let amountResult = amountConvert * currencyTypes[fromCurrency][toCurrency];
 
@@ -52,3 +52,11 @@ console.log(amountResult.toFixed(2))
 //     });
 //     return formatter.format(value);
 // }
+
+/*
+small tip for this class!
+.toLowerCase() .toUpperCase()
+it's JS buit in function
+
+tip 2 . if you dont wana open console every time to see the result, use alert(result)
+*/
