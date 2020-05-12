@@ -42,8 +42,6 @@ let toCurrency = document.getElementById('currency2');
 let amountConvert = document.getElementById('amountConvert');
 let btn = document.getElementById("convertButton");
 
-// let amountResult = amountConvert * currencyTypes[fromCurrency][toCurrency];
-
 convertButton.addEventListener("click", () => {
     let amt = amountConvert.value;
     amt ? "" : alert("Please enter amount to convert");
@@ -66,20 +64,12 @@ function formatCurrency(type, value) {
     return formatter.format(value);
 }
 
-const showResult = (to, result) => {
+let showResult = (to, result) => {
     let convertedResult = "";
-    to === "USD" ? convertedResult = formatCurrency('USD', result) : ""
-    to === "EUR" ? convertedResult = formatCurrency('EUR', result) : ""
-    to === "VND" ? convertedResult = formatCurrency('VND', result) : ""
-    to === "KRW" ? convertedResult = formatCurrency('KRW', result) : ""
-    to === "IDR" ? convertedResult = formatCurrency('IDR', result) : ""
+    to == "USD" ? convertedResult = formatCurrency('USD', result) : ""
+    to == "EUR" ? convertedResult = formatCurrency('EUR', result) : ""
+    to == "VND" ? convertedResult = formatCurrency('VND', result) : ""
+    to == "KRW" ? convertedResult = formatCurrency('KRW', result) : ""
+    to == "IDR" ? convertedResult = formatCurrency('IDR', result) : ""
     return convertedResult;
 }
-
-/*
-small tip for this class!
-.toLowerCase() .toUpperCase()
-it's JS buit in function
-
-tip 2 . if you dont wana open console every time to see the result, use alert(result)
-*/
