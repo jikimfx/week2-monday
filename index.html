@@ -13,6 +13,29 @@
 
 <body>
 
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <input id="amountConvert" type="number" placeholder="How much?" />
+        <select id="currency1">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="VND">VND</option>
+            <option value="KRW">KRW</option>
+            <option value="IDR">IDR</option>
+        </select>
+
+        <select id="currency2">
+            <option value="USD">USD</option>
+            <option value="EUR" selected>EUR</option>
+            <option value="VND">VND</option>
+            <option value="KRW">KRW</option>
+            <option value="IDR">IDR</option>
+        </select>
+
+        <button class="btn-primary" id="convertButton">Convert</button>
+        <h1 id="amountResult"></h1>
+    </div>
+
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
